@@ -1,0 +1,12 @@
+/.idea/
+*.iml
+/.vscode/
+
+.DS_Store
+
+/node_modules/
+/docs/
+/build/
+
+npm-debug.json
+package-lock.json

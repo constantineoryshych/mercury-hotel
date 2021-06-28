@@ -1,0 +1,26 @@
+{
+	"presets": [
+		"@babel/preset-typescript",
+		[
+			"@babel/preset-env",
+			{
+				"targets": {
+					"browsers": ["last 2 versions", "safari >= 7"]
+				}
+			}
+		]
+	],
+	"plugins": [
+		"@babel/plugin-proposal-class-properties",
+		"@babel/plugin-proposal-object-rest-spread",
+		[
+			"module-resolver",
+			{
+				"alias": {
+					"~/data": "./source/data/",
+					"~/c": "./source/ts/controller/"
+				}
+			}
+		]
+	]
+}

@@ -1,0 +1,208 @@
+
+
+main 
+	color: $primary
+	position: absolute
+	z-index: 0
+
+.fadein
+	animation: fadein 3s
+	visibility: visible
+	-moz-animation: fadein 3s
+	-webkit-animation: fadein 3s
+	-o-animation: fadein 3s
+
+.fadeout
+	animation: fadeOut 10s
+	visibility: hidden
+
+@keyframes fadeOut
+  0%
+    opacity: 1
+
+  100%
+    opacity: 0 
+
+@keyframes fadein
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+
+@-moz-keyframes fadein
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+
+@-webkit-keyframes fadein
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+
+@-o-keyframes fadein
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+		@keyframes fadein
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+
+main 
+	width: 100%
+	display: flex
+	-webkit-flex-flow: row
+	justify-content: space-around
+
+main .informer
+	width: 100%
+	text-align: left
+
+	.header
+		padding: 15px 30px 15px 60px
+		background: $primary
+		font-family: "HouschkaAltPro-DemiBold"
+
+		h1
+			font-size: 38px
+			line-height: 42px
+			color: white
+			text-transform: uppercase
+		h2
+			font-size: 24px
+			color: $secondary
+			text-transform: uppercase
+
+	.description
+		color: $primary
+		font-family: "HouschkaAltPro-DemiBold"
+		font-size: 13px
+		line-height: 16px
+		text-transform: uppercase
+		padding: 28px 30px 0 50px
+		span
+			color: $secondary
+
+	.datablock
+		margin: 0 35px 0 50px
+		font-family: "HouschkaAltPro-DemiBold"
+
+		> h1
+			padding: 33px 0 13px 0
+			height: 60px
+			box-sizing: border-box
+			width: 100%
+			font-size: 18px
+			text-align: right
+			text-transform: uppercase
+
+		> div
+			border-top: 1px solid $primary
+
+			.row
+				display: flex
+				justify-content: space-between
+				border-bottom: 1px solid $primary
+				box-sizing: border-box
+
+
+.informer
+	&[data-type="rates"]
+		min-width: 780px
+		width: 780px
+
+		.row
+			min-height: 90px
+
+	&[data-type="currency"], &[data-type="host"]
+		width: 570px
+
+		.row
+			min-height: 65px
+
+	&:last-child .datablock
+		padding: 0 50px 0 0
+
+
+	&[data-type="services1"], &[data-type="services2"]
+		.row
+			min-height: 90px
+
+	.rates, .services1, .services2 
+		.row
+			h1
+				font-size: 35px
+				line-height: 42px
+				padding-top: 16px
+				letter-spacing: .03em
+
+			h2
+				margin-top: 5px
+				font-size: 17px
+				text-transform: uppercase
+
+				> span
+					color: $secondary
+
+			> span
+				margin: auto 0
+				width: 30%
+				text-align: right
+				font-size: 38px
+
+			.dobleSting
+				h1
+					font-size: 24px
+
+	.currency .row
+		> *
+			margin: auto 0
+		img
+			width: 53px
+			height: 32px
+		h1
+			font-family: "HouschkaAltPro-Medium"
+			font-size: 38px
+			text-align: left
+			flex-grow: 1
+			padding-left: 80px
+		h2
+			font-family: "HouschkaAltPro-Light"
+			font-size: 46px
+			text-align: right
+
+	.datablock .host .row
+		flex-direction: column
+		justify-content: flex-start
+		min-height: 200px
+		box-sizing: border-box
+		padding: 20px 0
+		> div
+			margin: 0 0 10px
+
+		h1, h2
+			font-family: "HouschkaAltPro-DemiBold"
+			font-size: 30px
+		h2
+			color: $secondary
+
+		h3, h4
+			font-size: 28px
+			font-family: "HouschkaAltPro-Light"
+		h4
+			color: $secondary
+			
